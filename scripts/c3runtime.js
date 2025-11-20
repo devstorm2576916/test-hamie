@@ -1487,6 +1487,11 @@ self.C3_ExpressionFuncs = [
 		},
 		() => "POST",
 		() => "x-session-token",
+		() => "removeSessionToken",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() + "/api/v2/session/logout");
+		},
 		() => "score",
 		() => "coins",
 		() => "updateData",

@@ -32,7 +32,7 @@ const scriptsInEvents = {
 		runtime.callFunction("InitUser");
 	},
 
-	async EventGameplay_Event4_Act2(runtime, localVars)
+	async EventGameplay_Event5_Act2(runtime, localVars)
 	{
 		if (window.Telegram.WebApp) {
 			try {
@@ -72,22 +72,23 @@ const scriptsInEvents = {
 		}
 	},
 
-	async EventGameplay_Event34_Act1(runtime, localVars)
+	async EventGameplay_Event35_Act1(runtime, localVars)
 	{
-		runtime.globalVars.gSessionToken="";
-		
 		if(runtime.globalVars.gIsSessionActive){
 			runtime.callFunction("updateData");
-			runtime.globalVars.gIsSessionActive=false;
-		}
+			runtime.callFunction("removeSessionToken");
+		} 
+		
+		runtime.globalVars.gSessionToken="";
+		runtime.globalVars.gIsSessionActive=false;
 	},
 
-	async EventGameplay_Event58_Act1(runtime, localVars)
+	async EventGameplay_Event59_Act1(runtime, localVars)
 	{
 		runtime.globalVars.Selectedcolor = Math.round(Math.random() * 4)
 	},
 
-	async EventGameplay_Event66_Act1(runtime, localVars)
+	async EventGameplay_Event67_Act1(runtime, localVars)
 	{
 		runtime.globalVars.Selectedcolor = Math.round(Math.random() * 2)
 	},
