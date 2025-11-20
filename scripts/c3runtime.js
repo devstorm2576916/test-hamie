@@ -1467,8 +1467,6 @@ function or(l, r)
 }
 
 self.C3_ExpressionFuncs = [
-		() => "Content-Type",
-		() => "application/json",
 		() => "{}",
 		() => "telegramId",
 		p => {
