@@ -74,10 +74,11 @@ const scriptsInEvents = {
 
 	async EventGameplay_Event34_Act1(runtime, localVars)
 	{
+		runtime.globalVars.gSessionToken="";
+		
 		if(runtime.globalVars.gIsSessionActive){
 			runtime.callFunction("updateData");
-		} else {
-			runtime.callFunction("getSessionToken");
+			runtime.globalVars.gIsSessionActive=false;
 		}
 	},
 
