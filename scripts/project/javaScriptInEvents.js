@@ -41,13 +41,6 @@ const scriptsInEvents = {
 				window.Telegram.WebApp.enableClosingConfirmation();
 				// Get the Telegram UserInfo
 				const telegramId = window.Telegram.WebApp.initDataUnsafe.user.id;
-		
-				// Get the DeviceID and DeviceType, GameVersion
-				let deviceId = localStorage.getItem('deviceId');
-				if (!deviceId) {
-					deviceId = 'device_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-					localStorage.setItem('deviceId', deviceId);
-				}
 				
 				const ua = navigator.userAgent.toLowerCase();
 				let deviceType = 'desktop';
@@ -60,8 +53,7 @@ const scriptsInEvents = {
 				const clientVersion = '2.1.0'; 
 		
 				// Init the global variables
-				runtime.globalVars.gDeviceId = deviceId;
-				runtime.globalVars.gDeviceId = deviceType;
+				runtime.globalVars.gDeviceType = deviceType;
 				runtime.globalVars.gClientVersion = clientVersion;
 				runtime.globalVars.telegramId = telegramId;
 		
