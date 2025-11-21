@@ -1473,20 +1473,16 @@ self.C3_ExpressionFuncs = [
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
 		},
-		() => "deviceId",
-		() => "deviceType",
-		() => "clientVersion",
 		() => "getSessionToken",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() + "/api/v2/session/start");
+			return () => (v0.GetValue() + "/api/v2/game/start");
 		},
 		p => {
 			const n0 = p._GetNode(0);
 			return () => ("data=" + n0.ExpObject());
 		},
 		() => "POST",
-		() => "x-session-token",
 		() => "score",
 		() => "coins",
 		() => "updateData",
@@ -1533,10 +1529,6 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0();
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			return () => n0.ExpObject("sessionToken");
 		},
 		() => 9,
 		() => "background",

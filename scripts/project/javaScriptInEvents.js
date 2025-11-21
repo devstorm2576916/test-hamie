@@ -41,24 +41,9 @@ const scriptsInEvents = {
 				window.Telegram.WebApp.enableClosingConfirmation();
 				// Get the Telegram UserInfo
 				const telegramId = window.Telegram.WebApp.initDataUnsafe.user.id;
-				
-				const ua = navigator.userAgent.toLowerCase();
-				let deviceType = 'desktop';
-				if (/mobile|android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(ua)) {
-					deviceType = 'mobile';
-				} else if (/tablet|ipad|playbook|silk/i.test(ua)) {
-					deviceType = 'tablet';
-				}
-				
-				const clientVersion = '2.1.0'; 
 		
-				// Init the global variables
-				runtime.globalVars.gDeviceType = deviceType;
-				runtime.globalVars.gClientVersion = clientVersion;
 				runtime.globalVars.telegramId = telegramId;
-		
 				runtime.callFunction("getSessionToken");
-				
 			} catch (e) {
 			}
 		}
