@@ -1487,11 +1487,6 @@ self.C3_ExpressionFuncs = [
 		},
 		() => "POST",
 		() => "x-session-token",
-		() => "removeSessionToken",
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() + "/api/v2/session/logout");
-		},
 		() => "score",
 		() => "coins",
 		() => "updateData",
@@ -1534,6 +1529,7 @@ self.C3_ExpressionFuncs = [
 		() => 40,
 		() => 2700,
 		() => 1000,
+		() => "Multiple sessions detected.",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0();
@@ -1606,7 +1602,6 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject("motivationMessage");
 		},
-		() => "You are playing with multilple session.",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => (v0.GetValue() % 10);

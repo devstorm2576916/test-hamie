@@ -32,7 +32,7 @@ const scriptsInEvents = {
 		runtime.callFunction("InitUser");
 	},
 
-	async EventGameplay_Event5_Act2(runtime, localVars)
+	async EventGameplay_Event4_Act2(runtime, localVars)
 	{
 		if (window.Telegram.WebApp) {
 			try {
@@ -76,7 +76,6 @@ const scriptsInEvents = {
 	{
 		if(runtime.globalVars.gIsSessionActive){
 			runtime.callFunction("updateData");
-			runtime.callFunction("removeSessionToken");
 		} 
 		
 		runtime.globalVars.gSessionToken="";
