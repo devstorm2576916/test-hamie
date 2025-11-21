@@ -51,12 +51,7 @@ const scriptsInEvents = {
 
 	async EventGameplay_Event35_Act1(runtime, localVars)
 	{
-		if(runtime.globalVars.gIsSessionActive){
-			runtime.callFunction("updateData");
-		} 
-		
-		runtime.globalVars.gSessionToken="";
-		runtime.globalVars.gIsSessionActive=false;
+		runtime.callFunction("updateData");
 	},
 
 	async EventGameplay_Event59_Act1(runtime, localVars)
