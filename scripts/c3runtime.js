@@ -1526,10 +1526,6 @@ self.C3_ExpressionFuncs = [
 		() => 2700,
 		() => 1000,
 		() => "Multiple sessions detected.",
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0();
-		},
 		() => 9,
 		() => "background",
 		() => 10,
@@ -1590,6 +1586,10 @@ self.C3_ExpressionFuncs = [
 		},
 		() => -10,
 		() => "coin",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0();
+		},
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject("motivationMessage");
